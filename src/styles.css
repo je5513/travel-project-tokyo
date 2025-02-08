@@ -10,12 +10,25 @@ body {
 
 .grid {
   display: grid;
+  grid-gap: 64px;
+}
+
+.grid-2-columns {
+  grid-template-columns: auto auto;
+}
+
+.grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
+}
+
+.img-responsive {
+  max-width: 100%;
 }
 
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 header {
@@ -65,13 +78,43 @@ header a {
   text-decoration: none;
 }
 
+main {
+  background-color: #181525;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 5px;
+  opacity: 0.3;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #ffffff;
+  margin: 0;
+}
+
+main p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
 footer {
   color: white;
   background-image: linear-gradient(rgba(9, 32, 61, 0.9), rgba(9, 32, 61, 0.9)),
     url("../images/japan-ft.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer p {
@@ -79,7 +122,6 @@ footer p {
   font-weight: 400;
   line-height: 24px;
   opacity: 0.9;
-  margin-right: 20px;
 }
 
 footer ul {
@@ -98,6 +140,11 @@ footer a {
 }
 
 @media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
   header {
     padding: 60px 0;
   }
@@ -112,5 +159,9 @@ footer a {
 
   header h3 {
     font-size: 12px;
+  }
+
+  section {
+    padding: 30px;
   }
 }
